@@ -1,6 +1,8 @@
 package com.laziodisu.bean;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private Integer coins;
     private Integer currBracket;
     private Double currentEconomicStatus;
@@ -11,6 +13,19 @@ public class User {
     private String universityID;
 private Long employee;
 private Document document;
+
+    public User(Integer coins, Integer currBracket, Double currentEconomicStatus, Boolean exemption, String IBAN, String PIN, String taxCode, String universityID, Long employee, Document document) {
+        this.coins = coins;
+        this.currBracket = currBracket;
+        this.currentEconomicStatus = currentEconomicStatus;
+        this.exemption = exemption;
+        this.IBAN = IBAN;
+        this.PIN = PIN;
+        this.taxCode = taxCode;
+        this.universityID = universityID;
+        this.employee = employee;
+        this.document = document;
+    }
 
     public Integer getCoins() {
         return coins;
